@@ -7,11 +7,10 @@ class Solution {
                 k++;
             }
         }
-        System.out.println(k);
+        // System.out.println(k);
         while(k<nums.length){
             nums[k]=0;
             k++;
         }
-        // return k;
     }
 }
