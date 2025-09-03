@@ -14,6 +14,6 @@ class Solution {
         res=Math.max(res,r-l+1);
             r+=1;
         }
-        return (int)res;
+        return res;
     }
 }
