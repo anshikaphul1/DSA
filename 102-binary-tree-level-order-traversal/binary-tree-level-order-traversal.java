@@ -49,7 +49,7 @@ class Solution {
     public void helper(TreeNode root,List<List<Integer>> res,int level)
     {
         if(root==null) return;
-        if(res.size()==level) //har ek level ko dekh re hai jaise pehle 3 wala fir 9 or 20 wala
+        if(res.size()==level) //har ek level ko dekh re hai jaise pehle 3 wala fir 9 or 20 wala //basically kisi level ko first time visit krne ke liye
         res.add(new ArrayList<>());//usse new ArrayList bna kr add kar dete hai
         res.get(level).add(root.val);//result.get se hame 1d array mila jitne bhi hai or add se add ho jaate hai
         helper(root.left,res,level+1);
