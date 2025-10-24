@@ -3,8 +3,8 @@ class Solution {
         if(dividend==Integer.MIN_VALUE && divisor==-1){
             return Integer.MAX_VALUE;
         }
-        long quo=0;
-        quo= dividend/divisor;
+        
+        int quo= dividend/divisor;
         return (int)quo;
     }
 }
