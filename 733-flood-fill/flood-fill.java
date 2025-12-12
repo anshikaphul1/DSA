@@ -1,8 +1,8 @@
 class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        int oldimage=image[sr][sc];
-        if(oldimage==color) return image;
-        dfs(image,sr,sc,oldimage,color);
+        int oldcolor=image[sr][sc];
+        if(oldcolor==color) return image;
+        dfs(image,sr,sc,oldcolor,color);
         return image;
     }
     void dfs(int[][] image,int r,int c,int oldcolor,int newcolor){
