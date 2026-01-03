@@ -1,7 +1,6 @@
 class Solution {
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer>pq=new PriorityQueue<>();
-        //pehle first k ele dal denge
         for(int i=0;i<k;i++){
             pq.add(nums[i]);
         }
