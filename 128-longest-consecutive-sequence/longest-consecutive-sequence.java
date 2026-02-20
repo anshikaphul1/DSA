@@ -29,24 +29,46 @@ class Solution {
         //     longest=Math.max(longest,count);
         // }
         // return longest;
+    // if(nums.length==0) return 0;
+    //     Arrays.sort(nums);
+    //     int longest=1,currcnt=0,lastsmall=Integer.MIN_VALUE;
+    //     for(int i=0;i<nums.length;i++){
+    //         if(nums[i]-1==lastsmall){
+    //             currcnt++;
+    //             lastsmall=nums[i];
+    //         }
+    //         else if(nums[i]==lastsmall){
+    //             continue;
+    //         }
+    //         else if(nums[i]!=lastsmall){
+    //             // largest=Math.max(largest,currcnt);
+    //             currcnt=1;
+    //             lastsmall=nums[i];
+    //         }
+    //         longest=Math.max(longest,currcnt);
+    //     }
+    //     return longest;
+
+
     if(nums.length==0) return 0;
-        Arrays.sort(nums);
-        int longest=1,currcnt=0,lastsmall=Integer.MIN_VALUE;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]-1==lastsmall){
-                currcnt++;
-                lastsmall=nums[i];
-            }
-            else if(nums[i]==lastsmall){
-                continue;
-            }
-            else if(nums[i]!=lastsmall){
-                // largest=Math.max(largest,currcnt);
-                currcnt=1;
-                lastsmall=nums[i];
-            }
-            longest=Math.max(longest,currcnt);
+    int longest=1;
+    // int cnt=0;
+    HashSet<Integer>set=new HashSet<>();
+    for(int num:nums){
+        set.add(num);
+    }
+    for(int n:set){
+        if(!set.contains(n-1)){
+            int cnt=1;
+            int x=n;
+        
+        while(set.contains(x+1)){
+            cnt++;
+            x++;
         }
-        return longest;
+        longest=Math.max(longest,cnt);
+        }
+    }
+    return longest;
     }
 }
