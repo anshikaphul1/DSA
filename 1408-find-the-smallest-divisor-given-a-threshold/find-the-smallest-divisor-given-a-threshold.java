@@ -2,7 +2,8 @@ class Solution {
     public int division(int[]nums,int div){
         int sum=0;
         for(int num:nums){
-            sum+=Math.ceil((double)num/div);
+            // sum+=Math.ceil((double)num/div);
+            sum+=(num+div-1)/div;
         }
         return sum;
     }
