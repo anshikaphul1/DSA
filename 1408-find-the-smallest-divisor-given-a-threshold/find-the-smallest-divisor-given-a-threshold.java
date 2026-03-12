@@ -1,4 +1,5 @@
 class Solution {
+    // optimal
     public int division(int[]nums,int div){
         int sum=0;
         for(int num:nums){
@@ -40,7 +41,7 @@ class Solution {
     //     }
     // return -1;
 
-
+// optimal
         int low=1;
         // int high=0;
         int maxi=Integer.MIN_VALUE;
