@@ -10,7 +10,7 @@ class Solution {
             maxi=Math.max(maxi,entry.getValue());
         }
         StringBuilder result=new StringBuilder();
-        for(int i=s.length();i>=0;i--){
+        for(int i=maxi;i>=0;i--){
             for(Map.Entry<Character,Integer>entry:map.entrySet()){
                 if(entry.getValue()==i){
                     for(int j=0;j<i;j++){
