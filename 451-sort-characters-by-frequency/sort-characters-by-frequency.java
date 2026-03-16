@@ -1,7 +1,7 @@
 class Solution {
     public String frequencySort(String s) {
         // char ch=s.toCharArray();
-        HashMap<Character,Integer>map=new HashMap<>();
+        LinkedHashMap<Character,Integer>map=new LinkedHashMap<>();
         for(char ch:s.toCharArray()){
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
