@@ -5,10 +5,10 @@ class Solution {
         for(char ch:s.toCharArray()){
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
-        // int maxi=0;
-        // for(Map.Entry<Character,Integer>entry:map.entrySet()){
-        //     maxi=Math.max(maxi,entry.getValue());
-        // }
+        int maxi=0;
+        for(Map.Entry<Character,Integer>entry:map.entrySet()){
+            maxi=Math.max(maxi,entry.getValue());
+        }
         StringBuilder result=new StringBuilder();
         for(int i=s.length();i>=0;i--){
             for(Map.Entry<Character,Integer>entry:map.entrySet()){
