@@ -12,7 +12,7 @@ class Solution {
            
         // }
         // return -1 ;
-        LinkedHashMap<Character,Integer>map=new LinkedHashMap<>();
+        HashMap<Character,Integer>map=new HashMap<>();
         for(char ch:s.toCharArray()){
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
